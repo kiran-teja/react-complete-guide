@@ -19,7 +19,7 @@ const UserForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault(); // Prevent page reload
 
-    if (enteredName.length === 0 || enteredAge === 0) {
+    if (enteredName.trim().length === 0 || enteredAge.trim().length  === 0) {
       setError({
         title: "Invalid Input",
         message: "Please enter a valid name and age (not-empty values)",
@@ -27,7 +27,7 @@ const UserForm = (props) => {
       return;
     }
 
-    if (+enteredAge < 1) {
+    if (+enteredAge < 1) {  // + will make sure that enteredAge is a number
       setError({
         title: "Invalid Age",
         message: "Please enter a valid age (> 0)",
