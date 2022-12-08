@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 
 import styles from "./UserForm.module.css";
 const UserForm = (props) => {
@@ -49,7 +50,7 @@ const UserForm = (props) => {
   }
 
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}></ErrorModal>
       )}
@@ -78,7 +79,7 @@ const UserForm = (props) => {
           <Button type="submit">Add User</Button>
         </div>
       </form>
-    </div>
+    </Wrapper>
   );
 };
 

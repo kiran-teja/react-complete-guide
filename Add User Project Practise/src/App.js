@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import Users from "./components/Users/Users";
 import NewUser from "./components/NewUser/NewUser";
 
-const INITIAL_USERS = [
-  { id: 1, name: "AAA", age: 21 },
-  { id: 2, name: "BBB", age: 88 },
-];
+// const INITIAL_USERS = [
+//   { id: 1, name: "AAA", age: 21 },
+//   { id: 2, name: "BBB", age: 88 },
+// ];
 
 function App() {
   const [users, setUsers] = useState([]);
